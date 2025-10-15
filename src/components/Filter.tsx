@@ -21,32 +21,16 @@ export default function FilterBar({
 }: Props) {
   return (
     <div className="flex flex-wrap items-center justify-between gap-4 mb-6 bg-white shadow-sm border border-gray-200 rounded-xl p-4">
-      {/* 🔍 Search */}
       <div className="relative w-full sm:w-1/3">
         <input
           type="text"
           placeholder="Search tasks..."
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full pl-10 pr-4 py-2 text-sm text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full pl-10 pr-4 py-2 text-sm text-gray-700 border border-gray-300 rounded-lg "
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute left-3 top-2.5 w-5 h-5 text-gray-400"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1016.65 16.65z"
-          />
-        </svg>
       </div>
 
-      {/* 📂 Filter */}
       <div className="flex items-center gap-2">
         <label htmlFor="filter" className="text-sm text-gray-600">
           Status:
@@ -55,7 +39,7 @@ export default function FilterBar({
           id="filter"
           value={filter}
           onChange={(e) => onFilterChange(e.target.value)}
-          className="border border-gray-300 rounded-lg text-sm px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="border border-gray-300 rounded-lg text-sm px-3 py-2"
         >
           <option value="All">All</option>
           <option value="Pending">Pending</option>
@@ -63,7 +47,6 @@ export default function FilterBar({
         </select>
       </div>
 
-      {/* ↕️ Sort */}
       <div className="flex items-center gap-2">
         <label htmlFor="sort" className="text-sm text-gray-600">
           Sort:
@@ -72,7 +55,7 @@ export default function FilterBar({
           id="sort"
           value={sortBy}
           onChange={(e) => onSortChange(e.target.value)}
-          className="border border-gray-300 rounded-lg text-sm px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="border border-gray-300 rounded-lg text-sm px-3 py-2"
         >
           <option value="name">By Name</option>
           <option value="date">By Date</option>

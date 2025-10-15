@@ -18,7 +18,7 @@ export default function TaskList({ tasks, onEdit, onDelete }: Props) {
       {tasks.map((task) => (
         <div
           key={task.id}
-          className="flex items-center justify-between border p-3 rounded-md"
+          className="flex items-center justify-between  border-l-4 border-cyan-900 shadow-sm p-3 rounded-md hover:shadow-md hover:border-cyan-500 transition-shadow duration-200"
         >
           <div>
             <h3 className="font-semibold">{task.title}</h3>
