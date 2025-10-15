@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { Task } from "@/types/task";
-import { set } from "mongoose";
 
 interface Props {
   isOpen: boolean;
